@@ -759,7 +759,7 @@ a{
     display: block;
 }
 
-.accordion__item.active .accordion__header {
+.accordion__item.card .accordion__header {
     border-bottom-color: #e5e5e5;
 }
 
@@ -804,22 +804,29 @@ a{
 
 .accordion__content {
     padding: 15px 20px;
-    display: none;
 
     font-size: 15px;
     color: #999;
     font-style: italic;
     font-weight: 300;
 }
-
+.card-header{
+    width: 100%;
+}
 .accordion__title {
+    font-weight: 300;
     font-size: 14px;
     color: #333;
     text-transform: uppercase;
 }
 
-
-
+.accordion__item.card{
+    margin-top: 0;
+}
+.panel-heading{
+    background: transparent !important;
+    border-bottom: 1px solid #e5e5e5;
+}
 /* Reviews */
 .reviews {
     position: relative;
