@@ -734,7 +734,10 @@ a{
     padding: 0 15px;
 }
 .wedo__img-wrap{
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
     margin-bottom: 15px;
 }
 .wedo__img {
