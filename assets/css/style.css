@@ -135,7 +135,7 @@ a{
 	margin-top: 80px;
 }
 .intro .carousel-indicators li,
-.intro .carousel-indicators li.active {
+.intro .carousel-indicators li.slick-active {
 	float: left;
 	width: 25%;
 	height: auto;
@@ -155,12 +155,12 @@ a{
 	padding: 10px 0;
 }
 .intro .carousel-indicators li:hover .inner,
-.intro .carousel-indicators li.active .inner {
+.intro .carousel-indicators li.slick-active .inner {
 	border-color: #fff;
 	color: #fff;
 }
 .intro .carousel-indicators li:hover .inner:after,
-.intro .carousel-indicators li.active .inner:after {
+.intro .carousel-indicators li.slick-active .inner:after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -1817,7 +1817,7 @@ a{
         width: 100%;
     }
     .intro .carousel-indicators li .inner {
-        color:transparent;
+        color:transparent !important;
     }
     .intro .carousel-indicators li .inner:hover{
         color:transparent;

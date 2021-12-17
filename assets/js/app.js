@@ -1,5 +1,20 @@
-$(function() {
 
+    $('.main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,      
+        speed:500,
+      }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        $('.intro__slider-dots').eq(nextSlide).addClass('slick-active').siblings().removeClass('slick-active');;
+      });
+      $('[data-go]').on('click', function() {
+        const __this = $(this);
+        let index = __this.attr('data-go');
+          $('.main-slider').slick('slickGoTo', parseInt(index));
+      });
     var header = $("#header"),
         introH = $("#intro").innerHeight(),
         scrollOffset = $(window).scrollTop();
@@ -62,28 +77,14 @@ $(function() {
         $this.toggleClass("active");
     });
 
-    let sliderButtons = document.querySelectorAll('.slider__item');
-    sliderButtons.forEach((e)=>{
-        e.addEventListener('click',()=>{
-            let slide = e.getAttribute('data-slide');
-        })
-    })
+  
     /* Slider */
     $("[data-slider]").slick({
         infinite: true,
         fade: false,
         slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    $('.main-slider').slick({
-        slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-      });
+    });
+    
       
-      $('[data-go]').on('click', function() {
-        const __this = $(this);
-        let index = __this.attr('data-go');
-          $('.main-slider').slick('slickGoTo', parseInt(index));
-      });
-});
+    
