@@ -87,5 +87,4 @@
     });
     
       
-    
-    $('.collapse').collapse()
+   
